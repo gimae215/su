@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>수현아 생일 축하해</title>
+    <style>
+        @font-face {
+            font-family: 'HSBombaram3_Regular';
+            src: url('https://gcore.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.1/HSBombaram3_Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * { font-family: 'HSBombaram3_Regular'; margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: lightcyan; overflow: hidden; }
+        .wrap { max-width: 720px; width: 100%; margin: 0 auto; background-color: #fff; }
+        .wrap section { width: 100%; height: 100vh; position: relative; overflow: hidden; }
+        .wrap section .img1 { width: 100%; object-fit: contain; position: absolute; bottom: -100px; z-index: 999; }
+        .wrap section .img2 { width: 40%; object-fit: contain; position: absolute; right: 0; bottom: 300px; }
+        .wrap section .img3 { width: 70%; object-fit: contain; position: absolute; left: -150px; bottom: 0px; }
+        .wrap section h1 { padding-top: 50px; text-align: center; font-size: 60px; }
+
+        @media screen and (max-width: 700px) {
+            .wrap section .img2 { bottom: 250px; }
+        }
+
+        @media screen and (max-width: 600px) {
+            .wrap section .img2 { bottom: 200px; }
+            .wrap section h1 { font-size: 30px; }
+        }
+
+        @media screen and (max-width: 500px) {
+            .wrap section .img2 { bottom: 150px; }
+            .wrap section .img3 { left: -50px; }
+        }
+
+        @media screen and (max-width: 400px) {
+            .wrap section .img2 { bottom: 100px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <section>
+            <img src="/img1.png" alt="" class="img1">
+            <img src="/img2.png" alt="" class="img2">
+            <img src="/img3.png" alt="" class="img3">
+            <h1>수현아 생일 축하한다</h1>
+        </section>
+    </div>
+
+</body>
+</html>
