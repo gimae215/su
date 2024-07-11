@@ -1,0 +1,64 @@
+@charset 'utf-8';
+
+@font-face {
+    font-family: 'HSBombaram3_Regular';
+    src: url('https://gcore.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.1/HSBombaram3_Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* { font-family: 'HSBombaram3_Regular'; margin: 0; padding: 0; box-sizing: border-box; }
+a { text-decoration: none; }
+ul, ol, li { list-style: none; }
+body { background-color: lightcyan; overflow-x: hidden; }
+.wrap { max-width: 720px; width: 100%; margin: 0 auto; background-color: #fff; }
+.wrap section { width: 100%; height: 100vh; position: relative; overflow: hidden; display: none; opacity: 0; transition: opacity 0.5s ease; }
+.wrap section .content { width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; }
+.wrap section.active { display: block; opacity: 1; }
+.wrap section.intro .content { width: 100%; height: 100%; background: url(nap_room01.png) no-repeat center/cover;  }
+.wrap section .content>.txt { display: flex; flex-direction: column; gap: 20px;  }
+.wrap section .content>.txt p { text-align: center; padding: 0 10px; border-radius: 5px; background-color: rgba(255, 255, 255, .6); border: 1px solid #fff; position: relative; overflow: hidden; }
+.wrap section.intro .content .txt p { background-color: rgba(255, 164, 179, .6); border: 1px solid #fff; position: relative; overflow: hidden; }
+.wrap section .content .txt .next { width: 25px; height: 25px; font-family: arial; margin-left: auto; font-weight: 800; border: 1px solid #fff; border-radius: 50%; }
+.wrap section.intro .content .txt .next { background-color: rgba(255, 164, 179, 1); opacity: 0; animation: btn_opacity .5s; animation-delay: 5s; animation-fill-mode: forwards; }
+.wrap section.sec02 .content .txt .next { opacity: 0; animation: btn_opacity .5s; animation-delay: 4s; animation-fill-mode: forwards; }
+.wrap section.sec02 .content { background: url(exterior_hospital-06.png) no-repeat center/cover; }
+.wrap.sec03_wrap section { background: url(office03.png) no-repeat center/cover; display: none; opacity: 0; }
+.wrap.sec03_wrap section.active { display: block; opacity: 1; transition: opacity .5s; }
+.wrap.sec03_wrap section.sec03-1 .content .txt .next { opacity: 0; animation: btn_opacity .5s; animation-delay: 4s; animation-fill-mode: forwards; }
+.wrap.sec03_wrap section.sec03-2 .content .txt { position: relative; background-color: rgba(255, 164, 179, .8); text-align: center; width: 100%; padding: 30px 0; color: #fff; font-size: 20px; }
+.wrap.sec03_wrap section.sec03-2 .content .txt::after { display: block; content: ''; inset: 5px; border: 1px solid #e4287c; position: absolute; pointer-events: none;  }
+.wrap.sec03_wrap section.sec03-2 .content .txt ul { display: flex; flex-direction: column; gap: 10px; width: 100%; padding: 0 20px;  }
+.wrap.sec03_wrap section.sec03-2 .content .txt ul li { background-color: #fff; padding: 5px 0; display: flex; justify-content: center; align-items: center; border-radius: 10px; }
+.wrap.sec03_wrap section.sec03-2 .content .txt ul li a { color: #333; display: flex; align-items: center; }
+.wrap.sec03_wrap section.sec03-2 .content .txt ul li a::after { display: inline-block; content: '▶'; color: #e4287c; margin-left: 10px; font-size: 14px; }
+.wrap section.sec04 .content, .wrap section.sec04-1 .content { background: url(office03.png) no-repeat center/cover; }
+.wrap section.sec04 .content .bx { position: relative; width: 100%; height: 100%; }
+.wrap section.sec04 .content .bx .img { width: 100%; position: absolute; left: 0; bottom: 50px; }
+.wrap section.sec04 .content.end .bx .img { animation: img_move 3s; animation-fill-mode: forwards; }
+.wrap section.sec04 .content .bx .img img { width: 100%; }
+.wrap section.sec04 .content .bx .img img.hide { display: none; }
+.wrap section.sec04 .content .bx .txt { width: 100%; height: 150px; background-color: rgba(255, 164, 179, .8); z-index: 999; position: absolute; left: 0; bottom: 0; padding: 10px; }
+.wrap section.sec04 .content .bx .txt span.info { font-size: 14px; }
+.wrap section.sec04 .content .bx .txt .inner { inset: 5px; width: 100%; height: 100%; background-color: rgba(255, 255, 255, .8); border-radius: 5px; padding: 10px; }
+.wrap section.sec04 .content .bx .txt .inner .set { width: 100%; height: 100%; display: none; }
+.wrap section.sec04 .content .bx .txt .inner .set h3 { margin-bottom: 15px; position: relative; }
+.wrap section.sec04 .content .bx .txt .inner .set h3::after { width: 20px; height: 2px; background-color: rgb(255, 49, 84); display: block; content: '' ; bottom: -7px; left: 0; position: absolute; }
+.wrap section.sec04 .content .bx .txt .inner .set.on { display: block; }
+.wrap section.sec04-1 .content .txt { position: relative; background-color: rgba(255, 164, 179, .8); text-align: center; width: 100%; padding: 30px 0; color: #fff; font-size: 20px; }
+.wrap section.sec04-1 .content .txt::after { display: block; content: ''; inset: 5px; border: 1px solid #e4287c; position: absolute; pointer-events: none;  }
+.wrap section.sec04-1 .content .txt ul { display: flex; flex-direction: column; gap: 10px; width: 100%; padding: 0 20px;  }
+.wrap section.sec04-1 .content .txt ul li { background-color: #fff; padding: 5px 0; display: flex; justify-content: center; align-items: center; border-radius: 10px; }
+.wrap section.sec04-1 .content .txt ul li a { color: #333; display: flex; align-items: center; }
+.wrap section.sec04-1 .content .txt ul li a::after { display: inline-block; content: '▶'; color: #e4287c; margin-left: 10px; font-size: 14px; }
+
+
+@keyframes btn_opacity {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes img_move {
+    0% { left: 0; opacity: 1; }
+    100% { left: -100%; opacity: 0; }
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>수현아 생일 축하해</title>
+
+
+    <script src="https://imnews.imbc.com/page/include/js/lib/jquery-1.12.3.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="main.js"></script>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="wrap">
+        <section class="sec04 active">
+            <div class="content">
+                <div class="bx">
+                    <div class="img">
+                        <img src="img2.png" alt="" class="show">
+                        <img src="img2-2.png" alt="" class="hide">
+                    </div>
+                    <div class="txt">
+                        <div class="inner">
+                            <div class="set on">
+                                <h3>나</h3>
+                                <p>...</p>
+                            </div>
+                            <div class="set">
+                                <h3>박재범</h3>
+                                <p>...</p>
+                            </div>
+                            <div class="set">
+                                <h3>나</h3>
+                                <p>...</p>
+                            </div>
+                            <div class="set">
+                                <h3>박재범</h3>
+                                <p>안녕하세요?</p>
+                            </div>
+                            <div class="set">
+                                <h3>나</h3>
+                                <p>아~ 안녕하세요 박대리님 ㅎㅎ 오랜만에 뵙네요. 잘 지내셨어요?</p>
+                            </div>
+                            <div class="set">
+                                <h3>박재범</h3>
+                                <p>네, 전 잘 지냈죠. 수현씨는요?</p>
+                            </div>
+                            <div class="set">
+                                <h3>나</h3>
+                                <p>저야 뭐 늘... ㅎㅎ 잘 지내죠.<br>근데 왜 벗고 계세요?</p>
+                            </div>
+                            <div class="set">
+                                <h3>박재범</h3>
+                                <p>저 해외에서 공부하고 왔잖아요.<br>거기 사람들은 참 자유롭더라구요.<br>자유를 배워 왔달까...</p>
+                            </div>
+                            <div class="set">
+                                <h3>나</h3>
+                                <p>아, 예... 멋있으세요 밧데리님~</p>
+                            </div>
+                            <div class="set">
+                                <h3>박재범</h3>
+                                <p>그나저나 오늘 수현씨 생일이죠? 7월 11일.</p>
+                            </div>
+                            <div class="set">
+                                <h3>나</h3>
+                                <p>어머, 네! 기억해 주시다니 감동이에요.</p>
+                            </div>
+                            <div class="set gift">
+                                <h3>박재범</h3>
+                                <p>자, 선물. 올리브영 3만원 기프티콘이에요.<br>저랑 사귈래요?</p>
+                            </div>
+                            <div class="set">
+                                <h3>나</h3>
+                                <p>어머, 네!</p>
+                            </div>
+                            <div class="set">
+                                <h3>박재범</h3>
+                                <p>그럼 오늘부터 1일.<br>탕비실로 와서 내 몸에 바코드 찍어가요.</p>
+                            </div>
+                            <script>
+                                $(function(){
+                                    let currentIndex = 0; // 현재 on 클래스를 가지고 있는 요소의 인덱스
+                        
+                                    $('.inner').on('click', function(){
+                                        const sets = $('.inner .set');
+                        
+                                        // 현재 on 클래스를 가지고 있는 요소에서 on 클래스 제거
+
+                        
+                                        // 다음 요소에 on 클래스 추가
+                                        if (currentIndex < sets.length - 1) {
+                                            sets.removeClass('on');
+                                            currentIndex++;
+                                            sets.eq(currentIndex).addClass('on');
+                                            if (sets.eq(currentIndex).hasClass('gift')) {
+                                                $('img').removeClass('hide');
+                                                $('img.show').addClass('hide');
+                                            }
+                                        } else {
+                        
+                                            // .content에 end 클래스 추가하여 애니메이션 적용
+                                            $('.content').addClass('end');
+                        
+                                            // 5초 뒤 .sec04에서 active 클래스를 제거하고 .sec04-1에 active 클래스 추가
+                                            setTimeout(function() {
+                                                $('.sec04').removeClass('active');
+                                                $('.sec04-1').addClass('active');
+                                            }, 2500); // 5000ms = 5초
+                                        }
+                                    });
+                                });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sec04-1">
+            <div class="content">
+                <div class="txt">
+                    <span>해피엔딩<br>'그분'과 인연을 맺게 되었습니다.</span>
+                    <span class="info">* 바코드 원본은 제작자에게 문의하세요</span>
+                    <ul>
+                        <li>
+                            <a href="index.html">처음으로</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script>
+        $(document).ready(function() {
+            AOS.init();
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>수현아 생일 축하해</title>
+
+
+    <script src="https://imnews.imbc.com/page/include/js/lib/jquery-1.12.3.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="main.js"></script>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="wrap sec03_wrap">
+        <section class="sec03-1 active">
+            <div class="content">
+                <div class="txt">
+                    <p data-aos="fade-up" data-aos-duration="1000">아직 아무도 안 오셨네...</p>
+                    <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">역시 '그분'도......</p>
+                    <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="2000">...</p>
+                    <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="3000">어?</p>
+                    <button class="next" onclick="move('sec03-2')">></button>
+                </div>
+            </div>
+        </section>
+        <section class="sec03-2">
+            <div class="content">
+                <div class="txt">
+                    <span>'그분'이 눈앞에 나타났다.<br>나를 놀라게 한<br>'그분'의 정체는?</span>
+                    <ul>
+                        <li><a href="sec04.html">몬스타엑스 주헌</a></li>
+                        <li><a href="#" onclick="alert('퇴근 이슈로 미완입니다.')">데이식스 영케이</a></li>
+                        <li><a href="sec06.html">박재범</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script>
+        $(document).ready(function() {
+            AOS.init();
+        })
+
+        function move(page_name) {
+            $('section').removeClass('active');
+
+            $('.' + page_name).addClass('active');
+        }
+    </script>
+</body>
+</html>

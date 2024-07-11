@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>수현아 생일 축하해</title>
+
+
+    <script src="https://imnews.imbc.com/page/include/js/lib/jquery-1.12.3.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="main.js"></script>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="wrap">
+        <section class="sec04 active">
+            <div class="content">
+                <div class="bx">
+                    <div class="img">
+                        <img src="img1.png" alt="">
+                    </div>
+                    <div class="txt">
+                        <div class="inner">
+                            <div class="set on">
+                                <h3>이주헌</h3>
+                                <p>안녕하세요 수현씨 ㅎㅎ</p>
+                            </div>
+                            <div class="set">
+                                <h3>나</h3>
+                                <p>아 이책임님~ 오랜만이에요!<br>얼마나 보고 싶었는데요!<br>이제 휴직 끝나신 거죠?</p>
+                            </div>
+                            <div class="set">
+                                <h3>이주헌</h3>
+                                <p>아뇨 퇴사하는데요<br>평생 휴직입니다</p>
+                            </div>
+                            <script>
+                                $(function(){
+                                    let currentIndex = 0; // 현재 on 클래스를 가지고 있는 요소의 인덱스
+                        
+                                    $('.inner').on('click', function(){
+                                        const sets = $('.inner .set');
+                        
+                                        // 현재 on 클래스를 가지고 있는 요소에서 on 클래스 제거
+
+                        
+                                        // 다음 요소에 on 클래스 추가
+                                        if (currentIndex < sets.length - 1) {
+                                            sets.removeClass('on');
+                                            currentIndex++;
+                                            sets.eq(currentIndex).addClass('on');
+                                        } else {
+                        
+                                            // .content에 end 클래스 추가하여 애니메이션 적용
+                                            $('.content').addClass('end');
+                        
+                                            // 5초 뒤 .sec04에서 active 클래스를 제거하고 .sec04-1에 active 클래스 추가
+                                            setTimeout(function() {
+                                                $('.sec04').removeClass('active');
+                                                $('.sec04-1').addClass('active');
+                                            }, 2500); // 5000ms = 5초
+                                        }
+                                    });
+                                });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sec04-1">
+            <div class="content">
+                <div class="txt">
+                    <span>'그분'이 퇴사하였습니다.</span>
+                    <ul>
+                        <li>
+                            <a href="sec03.html">다시 선택하기</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script>
+        $(document).ready(function() {
+            AOS.init();
+        })
+
+    </script>
+</body>
+</html>
